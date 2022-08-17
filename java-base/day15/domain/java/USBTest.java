@@ -3,6 +3,7 @@ package domain.java;
 public class USBTest {
   public static void main(String[] args) {
     Computer computer = new Computer();
+    //
     Flash flash = new Flash();
     computer.transferData(flash);
   }
