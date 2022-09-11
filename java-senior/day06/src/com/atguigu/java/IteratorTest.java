@@ -30,4 +30,30 @@ public class IteratorTest {
     }
   }
 
+  @Test
+  public void test2() {
+    Collection coll = new ArrayList();
+    coll.add(123);
+    coll.add(456);
+    coll.add(new Date());
+    coll.add(new String("Tom"));
+    coll.add("abc");
+
+    Iterator iterator = coll.iterator();
+
+    while (iterator.hasNext()) {
+      Object next = iterator.next();
+      if ("Tom".equals(next)) {
+        iterator.remove();
+      }
+    }
+
+    Iterator iterator1 = coll.iterator();
+    while (iterator1.hasNext()) {
+      Object next = iterator1.next();
+      System.out.println(next);
+    }
+
+  }
+
 }
